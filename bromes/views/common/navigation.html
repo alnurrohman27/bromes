@@ -1,0 +1,38 @@
+<nav class="navbar-default navbar-static-side" role="navigation">
+    <div class="sidebar-collapse">
+        <ul side-navigation class="nav metismenu" id="side-menu">
+            <li class="nav-header">
+
+                <div class="profile-element" uib-dropdown>
+<!--                     <img alt="image" class="img-circle" src="img/logo.jpg"/> -->
+                    <a uib-dropdown-toggle href>
+                            <span class="clear">
+                                <span class="block m-t-xs">
+                                    <strong class="font-bold">{{session_name}}</strong>
+                                </span>
+                            </span>
+                    </a>
+                </div>
+                <div class="logo-element">
+                    IN+
+                </div>
+            </li>
+            <li ng-class="{active: $state.includes('dashboards')}">
+                <a ui-sref="dashboards"><i class="fa fa-th"></i> <span class="nav-label">{{ 'DASHBOARD' | translate }}</span> </a>
+            </li>
+            <li ng-class="{active: $state.includes('page')}">
+                <<a ui-sref="page.contacts"><i class="fa fa-th"></i> <span class="nav-label">{{ 'CONTACTS' | translate }}</span> </a>
+            </li>
+            <li ng-class="{active: $state.includes('page')}">
+                <<a ui-sref="page.events"><i class="fa fa-th"></i> <span class="nav-label">{{ 'EVENTS' | translate }}</span> </a>
+            </li>
+            <li ng-class="{active: $state.includes('page')}">
+                <<a ui-sref="page.message"><i class="fa fa-th"></i> <span class="nav-label">{{ 'MESSAGES' | translate }}</span> </a>
+            </li>
+            <li ng-class="{active: $state.includes('page')}">
+                <<a ui-sref="page.log"><i class="fa fa-th"></i> <span class="nav-label">{{ 'LOG' | translate }}</span> </a>
+            </li>
+        </ul>
+
+    </div>
+</nav>
