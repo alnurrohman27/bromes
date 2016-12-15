@@ -2,6 +2,7 @@ function MainCtrl($window,$rootScope,$scope,$http) {
 
     var url_now = $window.location.href.toString().split($window.location.host)[1];
 
+    $rootScope.session_name = sessionStorage.name;
     console.log(sessionStorage.name);
 
     if(typeof sessionStorage.name != 'undefined' && url_now == "/bromes/#/login"){

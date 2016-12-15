@@ -1,0 +1,42 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252"></head><body><div class="inmodal">
+    <div class="modal-header">
+        <i class="fa fa-calendar modal-icon"></i>
+        <h4 class="modal-title">Status Acara</h4>
+        <small class="font-bold">{{id}} - {{name}}</small>
+    </div>
+    <div class="modal-body">
+        <div class="row">
+            <p>
+                <button id="refresh" class="btn btn-primary" ng-click="refresh_status()">Refresh</button>
+            </p>
+        </div>
+        <div class="row" id="send_events">
+            <h3>Riwayat Revisi</h3>
+            <table datatable="ng" dt-options="dtOptions" class="table table-striped table-bordered table-hover dataTables-example">
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>ID Acara</th>
+                        <th>Nama Acara</th>
+                        <th>No HP</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="v in list_send_events">
+                    <td>{{ v.i }}</td>
+                    <td>{{ v.id }}</td>
+                    <td>{{ name }}</td>
+                    <td>{{ v.no_hp }}</td>
+                    <td>{{ v.status }}</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-white" ng-click="cancel()">Tutup</button>
+    </div>
+</div>
+
+</body></html>

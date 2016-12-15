@@ -2,15 +2,15 @@
     <div class="sidebar-collapse">
         <ul side-navigation class="nav metismenu" id="side-menu">
             <li class="nav-header">
-
+                <h3 class="font-bold" style="color: #1ab394;">Bromes</h3>
                 <div class="profile-element" uib-dropdown>
-<!--                     <img alt="image" class="img-circle" src="img/logo.jpg"/> -->
+                    <img alt="image" class="img-circle" src="img/logo.png"/>
                     <a uib-dropdown-toggle href>
-                            <span class="clear">
-                                <span class="block m-t-xs">
-                                    <strong class="font-bold">{{session_name}}</strong>
-                                </span>
+                        <span class="clear">
+                            <span class="block m-t-xs">
+                                <strong class="font-bold">{{session_name}}</strong>
                             </span>
+                        </span>
                     </a>
                 </div>
                 <div class="logo-element">
@@ -20,17 +20,17 @@
             <li ng-class="{active: $state.includes('dashboards')}">
                 <a ui-sref="dashboards"><i class="fa fa-th"></i> <span class="nav-label">{{ 'DASHBOARD' | translate }}</span> </a>
             </li>
-            <li ng-class="{active: $state.includes('page')}">
-                <<a ui-sref="page.contacts"><i class="fa fa-th"></i> <span class="nav-label">{{ 'CONTACTS' | translate }}</span> </a>
+            <li ng-class="{active: $state.includes('contacts')}">
+                <a ui-sref="contacts.contacts"><i class="fa fa-address-book"></i> <span class="nav-label">{{ 'CONTACTS' | translate }}</span> </a>
             </li>
-            <li ng-class="{active: $state.includes('page')}">
-                <<a ui-sref="page.events"><i class="fa fa-th"></i> <span class="nav-label">{{ 'EVENTS' | translate }}</span> </a>
+            <li ng-class="{active: $state.includes('events')}">
+                <a ui-sref="events.events"><i class="fa fa-calendar"></i> <span class="nav-label">{{ 'EVENTS' | translate }}</span> </a>
             </li>
-            <li ng-class="{active: $state.includes('page')}">
-                <<a ui-sref="page.message"><i class="fa fa-th"></i> <span class="nav-label">{{ 'MESSAGES' | translate }}</span> </a>
+            <li ng-class="{active: $state.includes('message')}">
+                <a ui-sref="message.message"><i class="fa fa-commenting-o"></i> <span class="nav-label">{{ 'MESSAGES' | translate }}</span> </a>
             </li>
-            <li ng-class="{active: $state.includes('page')}">
-                <<a ui-sref="page.log"><i class="fa fa-th"></i> <span class="nav-label">{{ 'LOG' | translate }}</span> </a>
+            <li ng-class="{active: $state.includes('log')}">
+                <a ui-sref="log.log"><i class="fa fa-sticky-note-o"></i> <span class="nav-label">{{ 'LOG' | translate }}</span> </a>
             </li>
         </ul>
 

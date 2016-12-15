@@ -1,0 +1,40 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252"></head><body><div class="inmodal">
+    <div class="modal-header">
+        <i class="fa fa-user modal-icon"></i>
+        <h4 class="modal-title">Ubah Kontak</h4>
+        <small class="font-bold">{{name}} - {{no}}</small>
+    </div>
+   <div class="panel-body">
+        <form role="form" ng-submit="update_contact()">
+            <div class="form-group">
+                <label>No HP</label>
+                <input ng-model="no" maxLength="13" type="text" class="form-control" placeholder="Masukkan No HP" required>
+            </div>
+            <div class="form-group">
+                <label>Nama</label>
+                <input ng-model="name" maxLength="100" class="form-control" type="text" placeholder="Masukkan Nama" required>
+            </div>
+            <div class="form-group">
+                <label>Alamat</label>
+                <input type="text" ng-model="address" class="form-control" maxLength="100" placeholder="Masukkan Alamat" required>
+            </div>
+            <div class="form-group">
+                <label>Email</label>
+                <input type="email" ng-model="email" class="form-control" maxLength="100" placeholder="Masukkan Email" >
+            </div>
+            <div class="form-group">
+                <label>Hak Akses</label>
+                <select id="privileges" ng-model="selected_privileges" class="form-control" required>
+                    <option value="">Pilih Konteks Dokumen</option>
+                    <option ng-repeat="(k,v) in list_privileges" value="{{v.id}}">{{v.id}}</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-default">Kirim</button>
+        </form>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-white" ng-click="cancel()">Tutup</button>
+    </div>
+</div>
+
+</body></html>

@@ -45,12 +45,12 @@ function config($stateProvider, $urlRouterProvider, $ocLazyLoadProvider, IdlePro
             },
             data: { pageTitle:'Dashboards' }
         })
-        .state('page', {
+        .state('contacts', {
             abstract: true,
-            url: "/transaction",
+            url: "/page",
             templateUrl: "views/common/content.html",
         })
-        .state('page.contacts', {
+        .state('contacts.contacts', {
             url: "/contacts",
             templateUrl: "views/bromes/contacts.html",
             data: { pageTitle: 'Kontak' },
@@ -88,7 +88,12 @@ function config($stateProvider, $urlRouterProvider, $ocLazyLoadProvider, IdlePro
                 }
             }
         })
-        .state('page.events', {
+        .state('events', {
+            abstract: true,
+            url: "/page",
+            templateUrl: "views/common/content.html",
+        })
+        .state('events.events', {
             url: "/events",
             templateUrl: "views/bromes/events.html",
             data: { pageTitle: 'Acara' },
@@ -126,7 +131,12 @@ function config($stateProvider, $urlRouterProvider, $ocLazyLoadProvider, IdlePro
                 }
             }
         })
-        .state('page.message', {
+        .state('message', {
+            abstract: true,
+            url: "/page",
+            templateUrl: "views/common/content.html",
+        })
+        .state('message.message', {
             url: "/message",
             templateUrl: "views/bromes/message.html",
             data: { pageTitle: 'Pesan' },
@@ -164,7 +174,12 @@ function config($stateProvider, $urlRouterProvider, $ocLazyLoadProvider, IdlePro
                 }
             }
         })
-        .state('page.log', {
+        .state('log', {
+            abstract: true,
+            url: "/page",
+            templateUrl: "views/common/content.html",
+        })
+        .state('log.log', {
             url: "/log",
             templateUrl: "views/bromes/log.html",
             data: { pageTitle: 'Log' },
