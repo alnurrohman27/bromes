@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="?android:windowBackground"
+    android:id="@+id/add_contact">
+
+    <TextView
+        android:text="Menambah Kontak"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="8dp"
+        android:id="@+id/textView2"
+        android:layout_marginStart="12dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:layout_marginTop="11dp"
+        android:id="@+id/addName"
+        android:layout_below="@+id/textView2"
+        android:hint="Nama"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:ems="10"
+        android:id="@+id/addEmail"
+        android:hint="Email"
+        android:layout_below="@+id/addAddress"
+        android:layout_marginEnd="12dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignStart="@+id/addAddress" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="phone"
+        android:ems="10"
+        android:id="@+id/addNumber"
+        android:hint="No HP"
+        android:layout_below="@+id/addName"
+        android:layout_alignEnd="@+id/addName"
+        android:layout_alignStart="@+id/addName" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:id="@+id/addAddress"
+        android:hint="Alamat"
+        android:inputType="textPostalAddress"
+        android:layout_below="@+id/addNumber"
+        android:layout_alignStart="@+id/addNumber"
+        android:layout_alignEnd="@+id/addNumber" />
+
+    <Button
+        android:text="Simpan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/saveNewContactButton"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="12dp"
+        android:layout_alignEnd="@+id/textView2" />
+
+    <Button
+        android:text="Batal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/saveNewContactButton"
+        android:id="@+id/cancelNewContactButton"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/saveNewContactButton" />
+</RelativeLayout>

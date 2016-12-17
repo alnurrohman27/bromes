@@ -3,6 +3,10 @@
 
     <group android:checkableBehavior="single">
         <item
+            android:id="@+id/nav_contacts"
+            android:icon="@android:drawable/sym_contact_card"
+            android:title="Contacts" />
+        <item
             android:id="@+id/nav_calendar"
             android:icon="@android:drawable/ic_menu_my_calendar"
             android:title="Event" />
@@ -10,10 +14,6 @@
             android:id="@+id/nav_message"
             android:icon="@drawable/ic_menu_send"
             android:title="Announcement" />
-        <item
-            android:id="@+id/nav_contacts"
-            android:icon="@android:drawable/sym_contact_card"
-            android:title="Contacts" />
     </group>
 
 </menu>
