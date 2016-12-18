@@ -5,15 +5,15 @@
         <item
             android:id="@+id/nav_contacts"
             android:icon="@android:drawable/sym_contact_card"
-            android:title="Contacts" />
+            android:title="Kontak" />
         <item
             android:id="@+id/nav_calendar"
             android:icon="@android:drawable/ic_menu_my_calendar"
-            android:title="Event" />
+            android:title="Acara" />
         <item
             android:id="@+id/nav_message"
             android:icon="@drawable/ic_menu_send"
-            android:title="Announcement" />
+            android:title="Pesan" />
     </group>
 
 </menu>
