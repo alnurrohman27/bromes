@@ -7,6 +7,8 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
@@ -35,9 +37,14 @@ public class AddContactFragment extends Fragment{
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        setHasOptionsMenu(true);
         myView = inflater.inflate(R.layout.add_contact, container, false);
         initUI();
         return myView;
+    }
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        inflater.inflate(R.menu.menu_add_contact, menu);
     }
     public void onBackPressed() {
         if(getFragmentManager().getBackStackEntryCount() > 0) {
@@ -63,7 +70,7 @@ public class AddContactFragment extends Fragment{
                 if (no.equals("") || name.equals("")) {
                     Toast.makeText(v.getContext(), "Data kurang lengkap", Toast.LENGTH_SHORT).show();
                 } else {
-                    String link = "http://10.151.43.169/bromes/php/android_insert.php?id=add_contact&no="+no+
+                    String link = "http://10.234.68.127/bromes/php/android_insert.php?id=add_contact&no="+no+
                             "&name="+name+"&email="+email+"&address="+address;
                     Log.d("Link", link.toString());
                     boolean result = addContact(link);
