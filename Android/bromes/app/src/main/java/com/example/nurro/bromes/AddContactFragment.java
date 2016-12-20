@@ -70,7 +70,7 @@ public class AddContactFragment extends Fragment{
                 if (no.equals("") || name.equals("")) {
                     Toast.makeText(v.getContext(), "Data kurang lengkap", Toast.LENGTH_SHORT).show();
                 } else {
-                    String link = "http://10.234.68.127/bromes/php/android_insert.php?id=add_contact&no="+no+
+                    String link = "http://192.168.43.10/bromes/php/android_insert.php?id=add_contact&no="+no+
                             "&name="+name+"&email="+email+"&address="+address;
                     Log.d("Link", link.toString());
                     boolean result = addContact(link);

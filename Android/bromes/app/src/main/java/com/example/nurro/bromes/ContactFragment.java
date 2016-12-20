@@ -36,13 +36,13 @@ public class ContactFragment extends Fragment{
     ListView myList;
     ArrayAdapter<String> adapter;
     InputStream inputStream = null;
-    String link = "http://10.234.68.127/bromes/php/android_search.php?id=contacts";
+    String link = "http://192.168.43.10/bromes/php/android_search.php?id=contacts";
     String line = null;
     String result = null;
     String[] data;
+
     @Nullable
     @Override
-
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         setHasOptionsMenu(true);
         myView = inflater.inflate(R.layout.contacts, container, false);

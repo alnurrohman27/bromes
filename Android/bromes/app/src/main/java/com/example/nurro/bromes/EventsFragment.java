@@ -57,7 +57,7 @@ public class EventsFragment extends Fragment {
     }
 
     private void ServerConnection() {
-        String link = "http://10.234.68.127/bromes/php/android_search.php?id=events";
+        String link = "http://192.168.43.10/bromes/php/android_search.php?id=events";
 
         try {
             URLConnection url = new URL(link).openConnection();
@@ -94,7 +94,7 @@ public class EventsFragment extends Fragment {
                         ViewGroup.LayoutParams.WRAP_CONTENT);
                 params.setMarginStart(30);
                 params.setMarginEnd(30);
-                params.setMargins(0, 30, 0, 0);
+                params.setMargins(0, 30, 0, 30);
 
                 int id = Integer.parseInt(jsonArray.getJSONObject(i).getString("id"));
 
